@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment"
+    android:background="@color/White">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/sekolah"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@color/Black"
+            android:alpha="0.5"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_marginTop="250dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@drawable/half_top_round"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Selamat Datang Muhammad Supriyadi"
+                            android:gravity="center|left"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/gotham"/>
+                        <ImageView
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_notifications_24"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:id="@+id/linearInfoDinasPendidikan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="2"
+                                        android:id="@+id/ivLogoSekolah"
+                                        android:src="@drawable/logo_sekolah"></ImageView>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tvNamaSiswa"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="5dp"
+                                            android:fontFamily="@font/gotham"
+                                            android:text="Muhammad Supriyadi"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tvSekolahBesar"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/gotham"
+                                            android:text="SMA Destiny"
+                                            android:textColor="@color/Black"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tvNamaSekolah"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/gotham"
+                                            android:text="SMA Destiny"
+                                            android:textSize="@dimen/text_xtra_large"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="2"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <Switch
+                                            android:id="@+id/switchMasuk"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:checked="true"
+                                            android:gravity="center"/>
+
+                                        <TextView
+                                            android:id="@+id/tvCheckMasuk"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Masuk"
+                                            android:fontFamily="@font/gotham"
+                                            android:textColor="@color/Black" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:src="@drawable/coin" />
+
+                                            <TextView
+                                                android:fontFamily="@font/gotham"
+                                                android:id="@+id/tvPoint"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="100" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/linearProfilSekolah"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+                                        <LinearLayout
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            >
+                                            <ImageView
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:src="@drawable/profile_sekolah" />
+                                        </LinearLayout>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Profil\nSekolah"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearAgendaSekolah"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/agenda_sekolah" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Agenda\nSekolah"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearEskul"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/eskul" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Eskul"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearERaport"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/e_raport" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="E-Raport"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearKabarSekolah"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/kabar_sekolah" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Kabar Sekolah"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:orientation="horizontal">
+                                    <LinearLayout
+                                        android:id="@+id/linearPrestasi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/prestasi" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Prestasi"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearPPDB"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/ppdb" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="PPDB"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearStrukturSekolah"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/struktur_sekolah" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Struktur\nSekolah"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearJadwalPelajaran"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                android:src="@drawable/jadwal_pelajaran" />
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Jadwal\nPelajaran"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearLihatSemua"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="50dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/round_menu"
+                                            android:elevation="5dp">
+                                            <com.airbnb.lottie.LottieAnimationView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="10dp"
+                                                app:lottie_fileName="more.json"
+                                                app:lottie_autoPlay="true"
+                                                app:lottie_loop="true"/>
+                                        </LinearLayout>
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gotham"
+                                            android:gravity="center|top"
+                                            android:text="Lihat\nSemua"
+                                            android:textColor="@color/Black"
+                                            android:textSize="@dimen/text_medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/White"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Kabar Sekolah"
+                                android:gravity="center|left"
+                                android:textSize="@dimen/text_xtra_large"
+                                android:textColor="@color/Primary"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/gotham"
+                                android:textStyle="bold"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:id="@+id/linearLihatSemuaKabarBerita">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lihat Semua"
+                                    android:gravity="center|right"
+                                    android:textColor="@color/Black"
+                                    android:textSize="@dimen/text_xtra_large" />
+                                <RelativeLayout
+                                    android:background="@drawable/rounded"
+                                    android:layout_width="20dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_height="20dp"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:id="@+id/relativeBack">
+                                    <ImageView
+                                        android:layout_margin="5dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/gradient_background"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/recyclerKabarBerita"/>
+                        <LinearLayout
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Gallery"
+                                android:gravity="center|left"
+                                android:textSize="@dimen/text_xtra_large"
+                                android:textColor="@color/Primary"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/gotham"
+                                android:textStyle="bold"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:id="@+id/linearLihatSemuaGallery">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lihat Semua"
+                                    android:gravity="center|right"
+                                    android:textColor="@color/Black"
+                                    android:textSize="@dimen/text_xtra_large" />
+                                <RelativeLayout
+                                    android:background="@drawable/rounded"
+                                    android:layout_width="20dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_height="20dp"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:id="@+id/relativeBackGallery">
+                                    <ImageView
+                                        android:layout_margin="5dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/gradient_background"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/recyclerGallery"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
